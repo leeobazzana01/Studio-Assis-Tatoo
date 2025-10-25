@@ -1,0 +1,85 @@
+/*resetando documento*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rye", serif;
+}
+
+body{
+    background-color: white;
+}
+
+/*estilizando um padrão para toda a tag interface*/
+.interface {
+    max-width: 1280px;
+    /*afastando o conteúdo das laterais*/
+    margin: 0 auto;
+}
+
+/*estilo do header*/
+header{
+    width: 100%; /*para o header ocupar 100% a tela*/
+    padding: 40px 0; /*afastando um pouco o header do topo do navegador*/ 
+}
+
+/*estilizando apenas a classe interface dentro da classe header*/
+header .interface{
+    display: flex;
+    justify-content: space-between; /*separando a logo, as opções e o botão de contato*/
+    align-items: center;
+}
+
+/*selecionando as imagens de todas as classes 'logo'*/
+.logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+/*estilizando os componentes do menu*/
+header .menu-desktop nav ul{
+    list-style-type: none; /*removendo as bolinhas das listas*/
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block; /*alinhando os links*/
+    margin: 0 40px; /*espeçamento dos links*/
+}
+
+/*estilizando os links dentro da lista do header*/
+header .menu-desktop nav ul li a{
+    color: #FF8C1A;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+/*estilizando o botão de contato*/
+header .btn-contato button{
+    width: 140px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid #FF8C1A;
+    color: #FF8C1A;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/*adicionando efeito de hover nos botões do header*/
+.menu-desktop nav ul li a:hover{
+    transform: scale(1.05); /*determinando qto de zoom usar*/
+}
+
+header .btn-contato button:hover{
+    background-color: #FF8C1A;
+    color: black;
+}
+
+/*ESTILO DO HERO*/
+section.hero-site{
+    height: 90vh; /*a seção toma 100% do tamanho da tela*/
+    background-image: url(); /*caminho da imagem de background*/
+}
