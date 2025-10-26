@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Rye", serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body{
@@ -21,6 +21,10 @@ body{
 header{
     width: 100%; /*para o header ocupar 100% a tela*/
     padding: 40px 0; /*afastando um pouco o header do topo do navegador*/ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /*adicionado para garantir que o header fique acima do conteúdo*/
 }
 
 /*estilizando apenas a classe interface dentro da classe header*/
@@ -59,6 +63,8 @@ header .menu-desktop nav ul li a{
 header .btn-contato button{
     width: 140px;
     height: 50px;
+}
+header .btn-contato button, .hero-site button{
     border-radius: 20px;
     font-size: 20px;
     background-color: transparent;
@@ -72,14 +78,62 @@ header .btn-contato button{
 .menu-desktop nav ul li a:hover{
     transform: scale(1.05); /*determinando qto de zoom usar*/
 }
-
 header .btn-contato button:hover{
+    background-color: #FF8C1A;
+    color: black;
+}
+
+.hero-site button:hover{
     background-color: #FF8C1A;
     color: black;
 }
 
 /*ESTILO DO HERO*/
 section.hero-site{
-    height: 90vh; /*a seção toma 100% do tamanho da tela*/
-    background-image: url(); /*caminho da imagem de background*/
+    height: 95vh; /*a seção toma 100% do tamanho da tela*/
+    background-image: url(../img/Design\ sem\ nome\ \(5\).png); /*caminho da imagem de background*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 180px; /*altura aproximada do header*/
+    margin-top: 0;
+}
+/*estilização padrao para o texto da hero*/
+.hero-site .interface{ 
+    display: flex;
+    align-items: center;
+    height: 100%;   
+}
+
+/*estilizando o título da hero*/
+.hero-site .txt-hero h1{
+    font-size: 4em;
+    line-height: 70px; /*CORREÇÃO: Adicionar px no line-height*/
+    font-weight: 200;
+    padding: 50px;
+}
+
+.hero-site .txt-hero h1 span{
+    display: block;
+    font-weight: 500;
+}
+
+.hero-site .txt-hero p{
+    font-size: 20px;
+    font-weight: 200;
+    padding: 50px;
+    font-size: 30px;
+}
+.hero-site .txt-hero p span{
+    display: block;
+    font-weight: 500;
+}
+.hero-site button{
+    width: 240px;
+    height: 80px;
+    font-size: 25px;
+    border: 1.2px solid #FF8C1A;
+    margin-left: 50px;
+    margin-top: 20px; /*adicionado para espaçamento do parágrafo*/
 }
