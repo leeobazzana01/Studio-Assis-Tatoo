@@ -66,6 +66,82 @@
         </div>
     </section>
 
+    <!--container carrossel com as tatugens-->
+    <main class="container-tatoo">
 
+        <!--lista dos itens mostrados-->
+        <div class="list">
+            <div class="item active"> <!--ativo é o produto visível-->
+                <div class="tatoo-img">
+                    <img src="./img/apple-watch.png" alt="Apple Watch">
+                </div>
+                <div class="content">
+                    <p class="product-tag">Novo Lançamento</p>
+                    <p class="product-name">Apple Watch Series 10</p>
+                    <p class="description">O Smartwatch mais avançado do mercado. Monitoramento completo de saúde, GPS
+                        integrado, tela AMOLED de alta resolução e bateria de longa duração. Perfeito para acompanhar
+                        seu estilo de vida ativo!
+                    </p>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="product-img">
+                    <img src="./img/air-pods.png" alt="Apple Air Pods">
+                </div>
+                <div class="content">
+                    <p class="product-tag">Som Premium</p>
+                    <p class="product-name">Air Pods Max</p>
+                    <p class="description">Experimente o som em sua forma mais pura. Cancelamento de ruído adaptativo,
+                        qualidade de áudio excepcional e design ergonômico para o máximo de conforto. Sua música nunca
+                        soou tão bem!</p>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+
+
+            </div>
+            <div class="item">
+                <div class="product-img">
+                    <img src="./img/vision-pro.png" alt="Vision Pro">
+                </div>
+                <div class="content">
+                    <p class="product-tag">Alta Performace</p>
+                    <p class="product-name">Apple Vision Pro</p>
+                    <p class="description">Realidade aumentada imersiva com Apple Vision Pro: inovação ao alcance dos
+                        olhos!</p>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+        <div class="arrows"><!--as flechas para mudar o produto mostrado na tela-->
+            <button class="arrow-btn" id="prev"><!--esquerda, p o produto anterior-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                </svg>
+            </button>
+            <button class="arrow-btn" id="next"><!--direita, para o próx produto-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                </svg>
+            </button>
+        </div>
+        <div class="indicators"><!--numero que indica o produto-->
+            <div class="numbers">01</div>
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--linkando com o js-->
+    <script src="/JavaScript/main.js"></script>
 </body>
 </html>

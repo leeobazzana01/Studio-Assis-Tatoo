@@ -91,7 +91,7 @@ header .btn-contato button:hover{
 /*ESTILO DO HERO*/
 section.hero-site{
     height: 95vh; /*a seção toma 100% do tamanho da tela*/
-    background-image: url(../img/Design\ sem\ nome\ \(5\).png); /*caminho da imagem de background*/
+    background-image: url(../img/rafaeltatuando.png); /*caminho da imagem de background*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
