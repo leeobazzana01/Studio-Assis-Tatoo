@@ -109,7 +109,7 @@ section.hero-site{
 /*estilizando o título da hero*/
 .hero-site .txt-hero h1{
     font-size: 4em;
-    line-height: 70px; /*CORREÇÃO: Adicionar px no line-height*/
+    line-height: 70px; 
     font-weight: 200;
     padding: 50px;
 }
@@ -135,5 +135,674 @@ section.hero-site{
     font-size: 25px;
     border: 1.2px solid #FF8C1A;
     margin-left: 50px;
-    margin-top: 20px; /*adicionado para espaçamento do parágrafo*/
+    margin-top: 20px; /*espaçamento do parágrafo*/
+}
+
+/*seçao portfolio de tatuagens -  CARROSSEL*/
+.portfolio {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.portfolio .titulo {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #FF8C1A;
+}
+
+/*estilos carrossel*/
+.carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.card-list {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 calc(33.333% - 20px);
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card-style {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-text {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #777;
+}
+
+/*BOTOES carrossel*/
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 140, 26, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #FF8C1A;
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+/*responsividade carrrosel*/
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 0 0 100%;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+}
+
+
+/*background em transição no fundo do carrossel*/
+.portfolio {
+    padding: 80px 0;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #f0f0f0 10%,
+        #d9d9d9 25%,
+        #b0b0b0 40%,
+        #707070 55%,
+        #404040 70%,
+        #1a1a1a 85%,
+        #000000 100%
+    );
+    background-attachment: fixed;
+}
+
+
+/*seção de SOBRE-transicao de preto p branco c scroll*/
+.sobre-bg {
+    width: 100%;
+    padding: 80px 0;
+    background-color: white
+}
+
+/*SOBRE c transicao suave de preto p branco (invertida)*/
+.sobre-bg {
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(
+        to bottom,
+        #000000 0%,     /*preto p o topo*/
+        #1a1a1a 10%,    
+        #303030 25%,    
+        #555555 40%,    
+        #888888 55%,    
+        #bfbfbf 70%,    
+        #e6e6e6 85%,    
+        #ffffff 100%    /*branco no final*/
+    );
+    background-attachment: fixed;
+}
+/*conteiner p centralizar conteudo*/
+.sobre-bg .interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*conteiner base*/
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    min-height: 400px;
+}
+
+/*conteúdo de texto*/
+.sobre-conteudo {
+    flex: 1;
+}
+
+.titulos-sobre {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: color 0.5s ease;
+}
+
+.texto-sobre {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    text-align: justify;
+    transition: color 0.5s ease;
+}
+
+/*container do ícone*/
+.sobre-imagem {
+    flex: 0 0 300px;
+    max-width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*circulo branco nos ícones de sobre*/
+.icone-circulo {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.icone-circulo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.icone-circulo:hover::before {
+    left: 100%;
+}
+
+.icone-circulo i {
+    font-size: 60px;
+    color: #000000;
+    transition: all 0.5s ease;
+    z-index: 2;
+    position: relative;
+}
+
+/*revertendo o efeito hover*/
+.icone-circulo:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(255, 140, 26, 0.4);
+}
+
+.icone-circulo:hover i {
+    color: #ffffff;
+    transform: rotate(10deg);
+}
+
+/*layout p cada direcao*/
+.sobre-esquerda .sobre-imagem {
+    order: -1;
+}
+
+.sobre-direita .sobre-imagem {
+    order: 1;
+}
+
+/*efeito de transição p o fundo clarear com scroll*/
+.sobre-container:nth-child(1) .titulos-sobre {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.sobre-container:nth-child(1) .texto-sobre {
+    color: #f0f0f0;
+}
+
+.sobre-container:nth-child(2) .titulos-sobre {
+    color: #e8e8e8;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.sobre-container:nth-child(2) .texto-sobre {
+    color: #d0d0d0;
+}
+
+.sobre-container:nth-child(3) .titulos-sobre {
+    color: #333333;
+    text-shadow: 0 2px 4px rgba(255,255,255,0.5);
+}
+
+.sobre-container:nth-child(3) .texto-sobre {
+    color: #555555;
+}
+
+/*responsividade*/
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .sobre-imagem {
+        flex: none;
+        max-width: 250px;
+        height: 250px;
+    }
+    .icone-circulo {
+        width: 180px;
+        height: 180px;
+    }
+    .icone-circulo i {
+        font-size: 50px;
+    }
+    .titulos-sobre {
+        font-size: 1.5rem;
+    }
+    .texto-sobre {
+        text-align: center;
+    }
+    .sobre-esquerda .sobre-imagem,
+    .sobre-direita .sobre-imagem {
+        order: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-imagem {
+        max-width: 200px;
+        height: 200px;
+    }
+    .icone-circulo {
+        width: 150px;
+        height: 150px;
+    }
+    .icone-circulo i {
+        font-size: 40px;
+    }
+}
+
+/*menu hamburguer p mobile*/
+.btn-abrir-menu {
+    display: none;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.btn-abrir-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #FF8C1A;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/*menu mobile*/
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #000000;
+    padding: 100px 20px 40px;
+    transition: right 0.5s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+
+.menu-mobile.active {
+    right: 0;
+}
+
+.menu-mobile nav ul {
+    list-style: none;
+}
+
+.menu-mobile nav ul li {
+    margin-bottom: 20px;
+}
+
+.menu-mobile nav ul li a {
+    color: #FF8C1A;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
+}
+
+.menu-mobile nav ul li a:hover {
+    color: #ffffff;
+    transform: translateX(10px);
+}
+
+/*btao pra fechar o menu mobile*/
+.btn-fechar {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn-fechar span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #FF8C1A;
+    border-radius: 2px;
+}
+.btn-fechar span:nth-child(1) {
+    transform: rotate(45deg);
+}
+.btn-fechar span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+/*overlay do menu*/
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    display: none;
+}
+.overlay-menu.active {
+    display: block;
+}
+/*botao de contato p mobile*/
+.btn-contato-mobile {
+    margin-top: 30px !important;
+}
+.btn-contato-mobile button {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid #FF8C1A;
+    color: #FF8C1A;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-contato-mobile button:hover {
+    background: #FF8C1A;
+    color: #000;
+}
+
+/*tda RESPONSIVIDADE COMPLETA*/
+
+/* Tablets */
+@media (max-width: 1024px) {
+    /*header*/
+    header .menu-desktop nav ul li {
+        margin: 0 20px;
+    }
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+    /*hero*/
+    .hero-site .txt-hero h1 {
+        font-size: 3em;
+        line-height: 60px;
+        padding: 30px;
+    }
+    .hero-site .txt-hero p {
+        font-size: 25px;
+        padding: 30px;
+    }
+    .hero-site button {
+        width: 220px;
+        height: 70px;
+        font-size: 22px;
+        margin-left: 30px;
+    }
+}
+
+/*RESPONSIVIDADE P DISPOSITIVOS MOBILE*/
+@media (max-width: 768px) {
+    /*esconde menu desktop pra mostrar o menu*/
+    .menu-desktop, .btn-contato {
+        display: none;
+    }
+    
+    .btn-abrir-menu {
+        display: flex;
+    }
+    /*header*/
+    header {
+        padding: 20px 0;
+    }
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    /*hero - pag inicial*/
+    section.hero-site {
+        height: 70vh;
+        padding-top: 100px;
+    }
+    .hero-site .txt-hero h1 {
+        font-size: 2.2em;
+        line-height: 45px;
+        padding: 20px;
+        text-align: center;
+    }
+    .hero-site .txt-hero h1 span {
+        font-size: 0.9em;
+    }
+    .hero-site .txt-hero p {
+        font-size: 18px;
+        padding: 20px;
+        text-align: center;
+    }
+    .hero-site .txt-hero p span {
+        font-size: 0.9em;
+    }
+    .hero-site button {
+        width: 200px;
+        height: 60px;
+        font-size: 18px;
+        margin: 20px auto;
+        display: block;
+    }
+    /*secao sobre*/
+    .sobre-container {
+        gap: 20px;
+        margin-bottom: 40px;
+        min-height: 300px;
+    }
+    
+    .titulos-sobre {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .texto-sobre {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .sobre-imagem {
+        flex: none;
+        max-width: 200px;
+        height: 200px;
+    }
+    .icone-circulo {
+        width: 120px;
+        height: 120px;
+    }
+    .icone-circulo i {
+        font-size: 40px;
+    }
+    /*carrossel*/
+    .portfolio .titulo {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+    .prev-btn {
+        left: 5px;
+    }
+    .next-btn {
+        right: 5px;
+    }
+}
+
+/*dispositivos MUITO pequenos*/
+@media (max-width: 480px) {
+    /* Hero */
+    .hero-site .txt-hero h1 {
+        font-size: 1.8em;
+        line-height: 35px;
+        padding: 15px;
+    }
+    .hero-site .txt-hero p {
+        font-size: 16px;
+        padding: 15px;
+    }
+    .hero-site button {
+        width: 180px;
+        height: 50px;
+        font-size: 16px;
+    }
+    /*secao sobre*/
+    .sobre-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .sobre-imagem {
+        max-width: 150px;
+        height: 150px;
+    }
+    .icone-circulo {
+        width: 100px;
+        height: 100px;
+    }
+    .icone-circulo i {
+        font-size: 30px;
+    }
+    .titulos-sobre {
+        font-size: 1.3rem;
+    }
+    .texto-sobre {
+        font-size: 0.9rem;
+    }
+    /*ajustes d layout pra mobile*/
+    .sobre-esquerda .sobre-imagem,
+    .sobre-direita .sobre-imagem {
+        order: 0;
+    }
+    /*gradientes p mobile*/
+    .sobre-bg, .portfolio {
+        background-attachment: scroll;
+    }
+}
+
+/*ajustes p landscape mobile*/
+@media (max-height: 500px) and (orientation: landscape) {
+    section.hero-site {
+        height: 100vh;
+        padding-top: 120px;
+    }
+    
+    .hero-site .txt-hero h1 {
+        font-size: 1.8em;
+        line-height: 35px;
+        padding: 10px;
+    }
+    
+    .hero-site .txt-hero p {
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .menu-mobile {
+        padding: 80px 20px 20px;
+    }
+    
+    .menu-mobile nav ul li {
+        margin-bottom: 10px;
+    }
 }

@@ -6,49 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Assis Tatoo</title>
     <link rel="stylesheet" href="./Css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rye&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rye&display=swap" rel="stylesheet">
+    <!--awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!--cabeçalho-->
-    <header>
+<header>
+    <div class="interface">
+        <!--adicionando a logo-->
+        <section class="logo">
+            <img src="./img/logo.jpg" alt="Logotipo Studio Assis Tatoo">
+        </section>
         
-        <!--div com o conteúdo centralizado-->
-        <div class="interface">
+        <!--menu do header para DESKTOP-->
+        <section class="menu-desktop">
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Tatuagens</a></li>
+                    <li><a href="#">Álbum</a></li>
+                </ul>
+            </nav>
+        </section>
 
-            <!--adicionando a logo-->
-            <section class="logo">
-                <img src="./img/logo.jpg" alt="Logotipo Studio Assis Tatoo">
-            </section>
-            
-            <!--menu do header-->
-            <section class="menu-desktop">
-                <!--menu de navegação-->
-                <nav>
-                    <ul>
-                        <!--link início-->
-                        <li><a href="#">Início</a></li>
-                        <!--link sobre-->
-                        <li><a href="#">Sobre</a></li>
-                        <!--link tatuagens-->
-                        <li><a href="#">Tatuagens</a></li>
-                        <!--link álbum artes-->
-                        <li><a href="#">Álbum</a></li>
-                    </ul>
-                </nav>
-            </section>
+        <!--botão de contato DESKTOP-->
+        <section class="btn-contato">
+            <a href="https://wa.me/5519999531665?text=Olá%2C%20gostaria%20de%20fazer%20um%20Orçamento!" target="_blank">
+                <button>Contato</button>
+            </a>
+        </section>
 
-            <!--botão de contato-->
-            <section class="btn-contato">
-                <a href="https://wa.me/5519999531665?text=Olá%2C%20gostaria%20de%20fazer%20um%20Orçamento!" target="_blank"">
-                    <button>Contato</button>
-                </a>
-            </section>
+        <!--botão hamburguer mobile-->
+        <div class="btn-abrir-menu" id="btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
+
+        <!--menu mobile-->
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-fechar">
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Tatuagens</a></li>
+                    <li><a href="#">Álbum</a></li>
+                    <li class="btn-contato-mobile">
+                        <a href="https://wa.me/5519999531665?text=Olá%2C%20gostaria%20de%20fazer%20um%20Orçamento!" target="_blank">
+                            <button>Contato</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--overlay do menu mobile-->
+        <div class="overlay-menu" id="overlay-menu"></div>
+    </div>
+</header>
 
     <!--estilizando o hero-->
     <section class="hero-site">
@@ -66,82 +91,122 @@
         </div>
     </section>
 
-    <!--container carrossel com as tatugens-->
-    <main class="container-tatoo">
-
-        <!--lista dos itens mostrados-->
-        <div class="list">
-            <div class="item active"> <!--ativo é o produto visível-->
-                <div class="tatoo-img">
-                    <img src="./img/apple-watch.png" alt="Apple Watch">
-                </div>
-                <div class="content">
-                    <p class="product-tag">Novo Lançamento</p>
-                    <p class="product-name">Apple Watch Series 10</p>
-                    <p class="description">O Smartwatch mais avançado do mercado. Monitoramento completo de saúde, GPS
-                        integrado, tela AMOLED de alta resolução e bateria de longa duração. Perfeito para acompanhar
-                        seu estilo de vida ativo!
+    <!--seção SOBRE-->
+    <main class="sobre-bg">
+        <div class="interface">
+            <div class="sobre-container sobre-esquerda">
+                <div class="sobre-conteudo">
+                    <h1 class="titulos-sobre">Nossa Missão</h1>
+                    <p class="texto-sobre">
+                        Nosso propósito vai muito além de apenas tatuar. O objetivo de nossa marca é unir Arte e com o estilo próprio desejado pelo Cliente através das Tatuagens.
+                        Cada traço é feito com cuidado e respeito, para que nossa Arte e Valores acompanhem nossos clientes pelo resto de suas vidas, relembrando memórias, pessoas e valores!
                     </p>
-                    <button class="btn">Saiba Mais</button>
+                </div>
+                <div class="sobre-imagem">
+                    <div class="icone-circulo">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
                 </div>
             </div>
 
-            <div class="item">
-                <div class="product-img">
-                    <img src="./img/air-pods.png" alt="Apple Air Pods">
+            <div class="sobre-container sobre-direita">
+                <div class="sobre-conteudo">
+                    <h1 class="titulos-sobre">Higiene e Saúde</h1>
+                    <p class="texto-sobre">
+                        Reconhecemos o valor indispensável de uma boa Higiene e cuidados, sobretudo com a saúde dos nossos Clientes. Por isso, buscamos sempre trabalhar com aparelhos esterilizados. Realizamos todos os cuidados pré e pós sessão para garantir cuidado em todo trabalho feito!
+                    </p>
                 </div>
-                <div class="content">
-                    <p class="product-tag">Som Premium</p>
-                    <p class="product-name">Air Pods Max</p>
-                    <p class="description">Experimente o som em sua forma mais pura. Cancelamento de ruído adaptativo,
-                        qualidade de áudio excepcional e design ergonômico para o máximo de conforto. Sua música nunca
-                        soou tão bem!</p>
-                    <button class="btn">Saiba Mais</button>
-                </div>
-
-
-            </div>
-            <div class="item">
-                <div class="product-img">
-                    <img src="./img/vision-pro.png" alt="Vision Pro">
-                </div>
-                <div class="content">
-                    <p class="product-tag">Alta Performace</p>
-                    <p class="product-name">Apple Vision Pro</p>
-                    <p class="description">Realidade aumentada imersiva com Apple Vision Pro: inovação ao alcance dos
-                        olhos!</p>
-                    <button class="btn">Saiba Mais</button>
+                <div class="sobre-imagem">
+                    <div class="icone-circulo">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="arrows"><!--as flechas para mudar o produto mostrado na tela-->
-            <button class="arrow-btn" id="prev"><!--esquerda, p o produto anterior-->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
-                </svg>
-            </button>
-            <button class="arrow-btn" id="next"><!--direita, para o próx produto-->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                </svg>
-            </button>
-        </div>
-        <div class="indicators"><!--numero que indica o produto-->
-            <div class="numbers">01</div>
-            <div class="dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+
+            <div class="sobre-container sobre-esquerda">
+                <div class="sobre-conteudo">
+                    <h1 class="titulos-sobre">Profissionalismo</h1>
+                    <p class="texto-sobre">
+                        Quando o assunto é Profissionalismo, estamos em constante busca por aprimoramento e evolução em cada seção. Possuímos experiência com diversos estilos e traços de tatuagens, deixando nossos traços mas acima de tudo nos adequando ao estilo e desenho desejado pelos clientes. Acompanhe mais detalhes sobre nosso trabalho nas seções abaixo.
+                    </p>
+                </div>
+                <div class="sobre-imagem">
+                    <div class="icone-circulo">
+                        <i class="fas fa-award"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
+    <!--seção TATUAGENS-carrossel -->
+    <section class="portfolio">
+        <div class="interface">
+            <h2 class="titulo">Meus Trabalhos</h2>
+        
+            <div class="carousel">
+                <button class="carousel-btn prev-btn">‹</button>
+            
+                <div class="carousel-container">
+                    <div class="card-list">
+                        <!--card 1-->
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="./img/chefecrimeperfeito.JPEG" alt="Chefe do Crime Perfeito">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Chefe do Crime Perfeito</h3>
+                                <p class="card-style">Lettering</p>
+                                <p class="card-text">Lettering detalhado com a frase "Chefe do Crime Perfeito"</p>
+                            </div>
+                        </div>
+                    
+                        <!--card 2-->
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="./img/anjo_braco.jpg" alt="Anjo Braço">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Anjo Braço</h3>
+                                <p class="card-style">Realismo</p>
+                                <p class="card-text">Tatuagem de anjo com detalhes realistas</p>
+                            </div>
+                        </div>
+                    
+                        <!--card 3-->
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="./img/borboleta.jpg" alt="Borboleta">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Borboleta</h3>
+                                <p class="card-style">Watercolor</p>
+                                <p class="card-text">Tatuagem colorida em estilo aquarela</p>
+                            </div>
+                        </div>
 
-    <!--linkando com o js-->
+                        <!--card 4-->
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="./img/minimalista.jpg" alt="Minimalista">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Minimalista</h3>
+                                <p class="card-style">Minimalismo</p>
+                                <p class="card-text">Desenho simples e limpo</p>
+                            </div>
+                        </div>
+
+                        <!--adicionar mais cards conforme adequado -->
+                    </div>
+                </div>
+            
+                <button class="carousel-btn next-btn">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!--linkando o js-->
     <script src="/JavaScript/main.js"></script>
 </body>
 </html>
