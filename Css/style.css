@@ -17,11 +17,11 @@ body{
     margin: 0 auto;
 }
 
-/*estilo do header*/
+/*estilo do header (MENU FIXO)*/
 header{
     width: 100%; /*para o header ocupar 100% a tela*/
     padding: 40px 0; /*afastando um pouco o header do topo do navegador*/ 
-    position: fixed;
+    position: fixed; /* Isso fixa o menu no topo */
     top: 0;
     left: 0;
     z-index: 1000; /*adicionado para garantir que o header fique acima do conteúdo*/
@@ -91,7 +91,7 @@ header .btn-contato button:hover{
 /*ESTILO DO HERO*/
 section.hero-site{
     height: 95vh; /*a seção toma 100% do tamanho da tela*/
-    background-image: url(../img/rafaeltatuando.png); /*caminho da imagem de background*/
+    background-image: url(../img/tatuador.jpg); /*caminho da imagem de background*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -804,5 +804,284 @@ section.hero-site{
     
     .menu-mobile nav ul li {
         margin-bottom: 10px;
+    }
+}
+
+/*seção de localização e mapa*/
+
+/*fundo da seção q ocupa 100% da largura */
+.localizacao-bg {
+    width: 100%;
+    padding: 80px 0;
+    /*back preto*/
+    background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+    position: relative;
+    /*texto branco legivel*/
+    color: white; 
+}
+
+/*container do mapa*/
+#mapa {
+    height: 500px; /*altura padrao*/
+    width: 100%;
+    border-radius: 15px;
+    /*sombra q destaca o fundo preto*/
+    box-shadow: 0 0 20px rgba(255, 140, 26, 0.2); 
+    border: 1px solid #333;
+    margin-bottom: 25px;
+    z-index: 1; /*mapa abaixo dos meus menus sobrepostos*/
+}
+
+/*controles de zooom personalizados*/
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.controles .btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/*efeito hover p os botoes de controle*/
+.controles .btn:hover {
+    background: #FF8C1A !important; /*cor*/
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 140, 26, 0.4) !important;
+}
+
+/*estiliza marcadores e pop ups do mapa*/
+
+/*popup personalizado do Leaflet */
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.leaflet-popup-content {
+    margin: 10px;
+}
+
+.popup-personalizado {
+    text-align: center;
+}
+
+.popup-personalizado h3 {
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.popup-personalizado p {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/*icone do marcador do circulo*/
+.marcador-bootstrap {
+    background: #FF8C1A;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+    /*alinhamento*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+/*icone do marcador*/
+.marcador-bootstrap i {
+    color: white !important;
+    font-size: 18px;
+
+    line-height: 0;      /*remove o espaco d texto */
+    display: block;      /*icone se comporta como bloco*/
+    margin-top: -2px;    /*centraliza o icon de pin*/
+}
+
+/*animação*/
+.marcador-bootstrap:hover {
+    transform: scale(1.2);
+    background: white;
+    border-color: #FF8C1A;
+}
+.marcador-bootstrap:hover i {
+    color: #FF8C1A !important;
+}
+/*retira estilos padrão do ícone Leaflet */
+.leaflet-div-icon {
+    background: transparent !important;
+    border: none !important;
+}
+
+/*responsividade da seção de mapa*/
+@media (max-width: 768px) {
+    .localizacao-bg {
+        padding: 50px 0;
+    }
+
+    #mapa {
+        height: 400px; /*mapa menor p tablets*/
+    }
+    
+    .controles .btn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #mapa {
+        height: 350px; /*mapa p mobile*/
+        border-radius: 10px;
+    }
+
+    /*ajutes p botoes n quebrarem layout*/
+    .controles {
+        gap: 10px;
+    }
+
+    .controles .btn {
+        flex: 1 1 auto; /*crescimento de botoes*/
+        font-size: 0.75rem;
+        padding: 8px 10px;
+    }
+}
+
+/*footer profissional*/
+
+.site-footer {
+    background-color: #000000; /*preto puro*/
+    padding: 70px 0 30px;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    border-top: 1px solid #1a1a1a;
+    position: relative;
+    z-index: 10;
+}
+
+/*tipografia*/
+.text-orange {
+    color: #FF8C1A !important;
+}
+
+.border-bottom-orange {
+    border-bottom: 2px solid #FF8C1A;
+}
+
+.btn-outline-orange {
+    border: 1px solid #FF8C1A;
+    color: #FF8C1A;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-orange:hover {
+    background-color: #FF8C1A;
+    color: #000;
+}
+
+/*links do footer*/
+.footer-links li {
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-links a:hover {
+    color: #FF8C1A;
+    padding-left: 5px; /*efeito visual*/
+}
+
+/*icones sociais principais*/
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background-color: #1a1a1a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.social-icons a:hover {
+    background-color: #FF8C1A;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 140, 26, 0.3);
+}
+
+/*section do dev*/
+.developer-badge {
+    background: #0a0a0a;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid #222;
+}
+
+.dev-links a {
+    color: #888;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-left: 5px;
+}
+
+.dev-links a:hover {
+    color: #FF8C1A;
+    transform: scale(1.1);
+}
+
+/*add responsividade ao footer*/
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 50px 0 20px;
+        text-align: center; /*mobile*/
+    }
+
+    /*alinhando itens da lista de contatos*/
+    .footer-contact li {
+        justify-content: center;
+    }
+
+    /*ajuste p badge*/
+    .developer-badge {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 15px;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .social-icons {
+        margin-bottom: 20px;
     }
 }
