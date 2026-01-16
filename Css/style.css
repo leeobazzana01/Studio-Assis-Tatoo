@@ -103,6 +103,10 @@ section.hero-site{
     padding: 50px;
 }
 
+txt-hero a{
+    text-decoration: none;
+}
+
 .hero-site .txt-hero h1 span{
     display: block;
     font-weight: 500;
@@ -885,14 +889,14 @@ section.hero-site{
 }
 
 .btn-outline-orange {
-    border: 1px solid #FF8C1A;
-    color: #FF8C1A;
+    border: 1px solid #FF8C1A !important;
+    color: #FF8C1A !important;
     transition: all 0.3s ease;
 }
 
 .btn-outline-orange:hover {
-    background-color: #FF8C1A;
-    color: #000;
+    background-color: #FF8C1A !important;
+    color: #000000 !important;
 }
 
 .footer-links li {
